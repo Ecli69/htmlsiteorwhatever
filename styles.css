@@ -1,0 +1,267 @@
+/* ===== ГЛОБАЛЬНЫЕ СТИЛИ ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #065cf0;
+    color: #1a2a3a;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ===== HEADER ===== */
+header {
+    background: linear-gradient(135deg, #0320fa, #6181ff);
+    color: #ffffff;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+header .logo h1 {
+    font-size: 28px;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    background: rgba(8, 0, 255, 0.2);
+    transform: scale(1.05);
+}
+
+/* ===== ЭКРАНЫ (СЕКЦИИ) ===== */
+.screen {
+    padding: 60px 0;
+    border-bottom: 2px dashed #d0dbe8;
+    scroll-margin-top: 80px;
+}
+
+.screen:nth-child(odd) {
+    background: #0b1ffd;
+}
+
+.screen:nth-child(even) {
+    background: #1500fa;
+}
+
+.screen h2 {
+    font-size: 36px;
+    color: #0b2a4a;
+    margin-bottom: 30px;
+    border-left: 6px solid #000482;
+    padding-left: 20px;
+}
+
+/* ===== ГЛАВНАЯ (hero) ===== */
+.my-image {
+    margin: 30px 0;
+    text-align: center;
+}
+
+.my-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+
+/* ===== ОБО МНЕ ===== */
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: center;
+}
+
+.about-text {
+    flex: 2;
+    min-width: 280px;
+}
+
+.about-text ul {
+    padding-left: 25px;
+    margin: 15px 0;
+}
+
+.about-text ul li {
+    margin-bottom: 6px;
+}
+
+.about-image {
+    flex: 1;
+    min-width: 200px;
+    text-align: center;
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+
+/* ===== ПОРТФОЛИО ===== */
+.portfolio-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.portfolio-item {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    text-align: center;
+    flex: 1 1 250px;
+    max-width: 320px;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-6px);
+}
+
+.portfolio-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 12px;
+}
+
+.portfolio-item h3 {
+    color: #0b2a4a;
+    margin-bottom: 8px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background: #0b1a2a;
+    color: #cfddee;
+    padding: 40px 20px 0;
+}
+
+.footer-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #2a4a6a;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 180px;
+}
+
+.footer-section h4 {
+    color: #7ab8e0;
+    font-size: 20px;
+    margin-bottom: 14px;
+    border-bottom: 2px solid #2a4a6a;
+    padding-bottom: 8px;
+}
+
+.footer-section p,
+.footer-section li {
+    margin-bottom: 8px;
+    font-size: 15px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li a {
+    color: #b0cce0;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #7ab8e0;
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 14px;
+    color: #6a8aaa;
+}
+
+/* ===== АДАПТИВ ===== */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 20px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .screen h2 {
+        font-size: 28px;
+    }
+
+    .portfolio-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .portfolio-item {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
